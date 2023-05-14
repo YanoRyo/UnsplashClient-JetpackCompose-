@@ -1,5 +1,6 @@
 package com.example.unsplashclientjetpackcompose.data.repository
 
+import com.example.unsplashclientjetpackcompose.data.remote.PhotoDetailDto
 import com.example.unsplashclientjetpackcompose.data.remote.SearchPhotosResultDto
 import com.example.unsplashclientjetpackcompose.data.remote.UnsplashApi
 import com.example.unsplashclientjetpackcompose.domain.repository.PhotoRepository
@@ -11,5 +12,9 @@ class PhotoRepositoryImpl @Inject constructor(
 
     override suspend fun searchPhotos(query: String): SearchPhotosResultDto {
         return api.searchPhotos(query)
+    }
+
+    override suspend fun getPhotoById(photoId: String): PhotoDetailDto {
+        return api.getPhotoById(photoId)
     }
 }
