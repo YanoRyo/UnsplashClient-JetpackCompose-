@@ -18,9 +18,9 @@ fun SearchPhotosScreen(
     val state = viewModel.state.value
     Scaffold(
         topBar = {
-            SearchBar(searchText = "",
-                onDone = {  },
-                onSearchTextChanged = { },
+            SearchBar(searchText = viewModel.query,
+                onDone = { viewModel.searchPhotos() },
+                onSearchTextChanged = { viewModel.query = it },
             )
         }
     ) {paddingValue ->
