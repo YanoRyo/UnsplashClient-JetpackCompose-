@@ -33,11 +33,11 @@ class MainActivity : ComponentActivity() {
                     ){
                         // 画像検索画面
                         composable(route = ScreenRoute.SearchPhotoScreen.route){
-                            SearchPhotosScreen()
+                            SearchPhotosScreen(navController)
                         }
                         // 画像詳細表示画面
-                        composable(route = ScreenRoute.PhotoDetailScreen.route){
-                            // TODO
+                        composable(route = ScreenRoute.PhotoDetailScreen.route + "/{photoId}"){
+                            Text(text = "画像詳細表示画面")
                         }
                     }
                 }
