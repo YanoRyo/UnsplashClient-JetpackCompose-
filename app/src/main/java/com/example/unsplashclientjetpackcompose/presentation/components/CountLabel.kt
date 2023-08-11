@@ -30,7 +30,7 @@ fun CountLabel(
         Spacer(modifier = Modifier.width(5.dp))
         Text(
             text = count.toString(),
-            color = Color.White,
+            color = Color.Black,
             style = MaterialTheme.typography.body1
         )
     }
